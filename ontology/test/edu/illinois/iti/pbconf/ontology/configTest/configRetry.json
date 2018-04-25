@@ -1,0 +1,17 @@
+[
+{
+    "input":{
+       "ontology":"config",
+       "ontologizer":"SEL421",
+       "individual":"sel421FAKEDEVICEB",
+       "properties":[
+          {  
+             "Op":"variable",
+             "Key":"hasRetryDelayed",
+             "Val":"50"
+          }
+       ]
+    },
+    "result":"VALID"
+}
+]

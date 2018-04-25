@@ -1,0 +1,108 @@
+/***********************************************************************
+   Copyright 2018 Information Trust Institute
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+***********************************************************************/
+
+
+// protoc -I.  --go_out=plugins=grpc:../driver/ driver.proto
+
+syntax = "proto3";
+
+option go_package = "driver";
+
+package Driver;
+
+message BoolReply {
+    bool ok = 1;
+}
+
+message KVPair {
+    DeviceID devid = 1;
+    string key = 2;
+    string value = 3;
+}
+
+service Engine {
+    rpc Register(RegRequest) returns (BoolReply){}
+    rpc GetMeta(KVRequest) returns (KVPair){}
+    rpc SaveMeta(KVPair) returns (BoolReply){}
+}
+
+message KVRequest {
+    DeviceID devid = 1;
+    string key = 2;
+}
+
+message RegRequest {
+    string name = 1;
+    string socket = 2;
+}
+
+
+service Driver {
+    rpc GetConfig(DeviceID) returns (ConfigFiles){}
+    rpc TranslatePass(UserPass) returns (CommandSeq) {}
+    rpc TranslateService(Service) returns (CommandSeq) {}
+    rpc TranslateVar(Var) returns (CommandSeq){}
+    rpc TranslateSvcConfig(ServiceConfig) returns (CommandSeq){}
+    rpc ExecuteConfig(CommandSeq) returns (BoolReply){}
+}
+
+message DeviceID {
+    int64 id = 1;
+}
+
+message ServiceConfig {
+    DeviceID devid = 1;
+    string name = 2;
+    string key = 3;
+    string value = 4;
+}
+
+message UserPass {
+    DeviceID devid = 1;
+    string username = 2;
+    string password = 3;
+}
+
+message Service {
+    DeviceID devid = 1;
+    string name = 2;
+    bool state = 3;
+}
+
+message Var {
+    DeviceID devid = 1;
+    string key = 2;
+    string value = 3;
+}
+
+message Command {
+    string command = 1;
+}
+
+message CommandSeq {
+    DeviceID devid = 1;
+    repeated Command commands = 2;
+}
+
+message ConfigFile {
+    string name = 1;
+    bytes content = 2;
+}
+
+message ConfigFiles {
+    DeviceID devid = 1;
+    repeated ConfigFile files = 2;
+}

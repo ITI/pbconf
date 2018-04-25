@@ -1,0 +1,17 @@
+[
+{
+    "input":{
+       "ontology":"config",
+       "ontologizer":"SEL421",
+       "individual":"sel421FAKEDEVICEC_test_allowed_operation_b",
+       "properties":[
+          {  
+             "Op":"type",
+             "Key":"",
+             "Val":"sel421_protection_setting"
+          }
+       ]
+    },
+    "result":"VALID"
+}
+]

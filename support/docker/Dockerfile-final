@@ -1,0 +1,7 @@
+FROM pbconf
+
+RUN ssh-keygen -f /etc/pbconf/ssh -N '' -t rsa
+RUN cd /etc/pbconf; /usr/bin/pbconf_gen_cert --host `hostname`
+RUN sqlite3 /etc/pbconf/pbconf.db < /build/src/iti/pbconf/support/schema;  sqlite3 /etc/pbconf/pbconf.db < /build/src/iti/pbconf/support/test_data_docker
+
+CMD bash /build/src/iti/pbconf/support/docker-start /usr/bin/pbconf -c /etc/pbconf/pbconf.conf -l DEBUG

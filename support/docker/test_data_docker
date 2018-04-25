@@ -1,0 +1,16 @@
+-- Sample data
+-- This is example user accounts (and schema) which are commented out
+-- john, hello; jane, koolaid; maya world
+-- INSERT INTO Users (name, passwordHash, email, role) values ("john", "$2a$10$iz59kRqwgCgFwGpdJmQlTOWxu01cKoHjnsGD7OYGX7N9o59dvq1fO", "john@merry.com", "user");
+-- INSERT INTO Users (name, passwordHash, email, role) values ("jane", "$2a$10$eOgMyVtk5YezerhxqVMDFul/w1wSpXqTqdlliydLSEJbbcTAg8vdq", "jane@merry.com", "admin");
+-- INSERT INTO Users (name, passwordHash, email, role) values ("maya", "$2a$10$4X1J3NGP2w4TNKOyXzPRqOP25WkbFR/L/r7gpxBC09TKaYlSSRlN2", "maya@merry.com", "admin");
+
+INSERT INTO ConfigItems (key, value) values('ReportTimer', "5s");
+INSERT INTO ConfigItems (key, value) values('PollTimer', "7s");
+INSERT INTO ConfigItems (key, value) values('UpstreamNode', "");
+INSERT INTO ConfigItems (key, value) values('PropogateDeviceConfig', "true");
+
+INSERT INTO ConfigLines (node, configItem) values (1, (SELECT id from ConfigItems WHERE key ='ReportTimer'));
+INSERT INTO ConfigLines (node, configItem) values (1, (SELECT id from ConfigItems WHERE key ='PollTimer'));
+INSERT INTO ConfigLines (node, configItem) values (1, (SELECT id from ConfigItems WHERE key ='UpstreamNode'));
+INSERT INTO ConfigLines (node, configItem) values (1, (SELECT id from ConfigItems WHERE key ='PropogateDeviceConfig'));

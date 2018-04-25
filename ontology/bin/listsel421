@@ -1,0 +1,6 @@
+#! /bin/bash
+SCRIPT=$(realpath "$0")
+SCRIPT_DIR=$(dirname "$SCRIPT")
+cd $SCRIPT_DIR/..
+
+java -cp ":./lib/*:./build/classes" edu.illinois.iti.pbconf.ontology.ListSEL421 $1

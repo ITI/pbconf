@@ -1,0 +1,17 @@
+master:
+    build: .
+    ports:
+        - "8443:80"
+slave1:
+    build: .
+    ports:
+        - "8444:80"
+    links:
+        - master
+
+slave2:
+    build: .
+    ports:
+        - "8445:80"
+    links:
+        - master

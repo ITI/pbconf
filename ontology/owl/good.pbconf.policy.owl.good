@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://iti.illinois.edu/iti/pbconf/policy#"
+     xml:base="http://iti.illinois.edu/iti/pbconf/policy"
+     xmlns:core="http://iti.illinois.edu/iti/pbconf/core#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://iti.illinois.edu/iti/pbconf/policy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasLvl1Pwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasLvl1Pwd"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasLvl2Pwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasLvl2Pwd"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasPwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasPwd"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/policy#hasClassTarget -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/policy#hasClassTarget"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/policy#hasLvlCPwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/policy#hasLvlCPwd"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/policy#hasReasonerName -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/policy#hasReasonerName"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/policy#requiresProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/policy#requiresProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/policy#ClosedWorldReasoner -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/policy#ClosedWorldReasoner"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/policy#TEST421 -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/policy#TEST421"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/policy#TESTClosedWorldReasoner -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/policy#TESTClosedWorldReasoner"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#cwr0 -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#cwr0">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/policy#ClosedWorldReasoner"/>
+        <hasClassTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SEL421</hasClassTarget>
+        <hasReasonerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ClassMustHaveProperty</hasReasonerName>
+        <requiresProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasLvl2Pwd</requiresProperty>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#cwr2 -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#cwr2">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/policy#ClosedWorldReasoner"/>
+        <hasClassTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SEL421</hasClassTarget>
+        <hasReasonerName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ClassMustHaveProperty</hasReasonerName>
+        <requiresProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasLvlCPwd</requiresProperty>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/policy#test421a -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/policy#test421a">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/policy#TEST421"/>
+        <core:hasLvl1Pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testpass</core:hasLvl1Pwd>
+        <core:hasLvl2Pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testPass</core:hasLvl2Pwd>
+        <hasLvlCPwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dsodinbqeor</hasLvlCPwd>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/policy#test421b -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/policy#test421b">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/policy#TEST421"/>
+        <core:hasLvl1Pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testpass</core:hasLvl1Pwd>
+        <core:hasLvl2Pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testPass</core:hasLvl2Pwd>
+        <hasLvlCPwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dsodinbqeor</hasLvlCPwd>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/policy#test421c -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/policy#test421c">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/policy#TEST421"/>
+        <core:hasLvl1Pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testpass</core:hasLvl1Pwd>
+        <hasLvlCPwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dsodinbqeor</hasLvlCPwd>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

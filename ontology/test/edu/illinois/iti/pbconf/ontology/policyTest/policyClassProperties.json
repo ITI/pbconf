@@ -1,0 +1,42 @@
+[
+{
+    "input":{
+        "ontology":"policy",
+        "data":[
+            [
+                {  
+                    "Class":"SEL421",
+                    "Axioms":[  
+                       {  
+                          "s":"hasNTPStt",
+                          "p":"state",
+                          "o":"on"
+                       },
+                       {  
+                          "s":"hasAccessTimeout",
+                          "p":"gte",
+                          "o":"20"
+                       }
+                    ]
+                },
+                {  
+                    "Class":"sel421FAKEDEVICEA",
+                    "Axioms":[  
+                       {  
+                          "s":"hasNTPStt",
+                          "p":"state",
+                          "o":"on"
+                       },
+                       {  
+                          "s":"hasAccessTimeout",
+                          "p":"gte",
+                          "o":"20"
+                       }
+                    ]
+                }
+            ]
+        ]
+     },
+    "result":"VALID"
+}
+]

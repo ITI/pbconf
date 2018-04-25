@@ -1,0 +1,12 @@
+{
+    "prefixes":[
+        {"prefix":"owl","iri":"http://www.w3.org/2002/07/owl"},
+        {"prefix":"pbconf","iri":"http://iti.illinois.edu/iti/pbconf/core"},
+        {"prefix":"config","iri":"http://iti.illinois.edu/iti/pbconf/config"},
+        {"prefix":"policy","iri":"http://iti.illinois.edu/iti/pbconf/policy"}       
+    ],
+    "ontologyDirectory":"owl",
+    "coreOntology":"pbconf",
+    "additionalOntologies":[
+    ]
+}

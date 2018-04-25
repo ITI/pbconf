@@ -1,0 +1,33 @@
+[
+{
+    "input":{
+        "ontology":"policy",
+        "data":[[{
+            "Class":"sel421FAKEDEVICEA",
+            "Axioms":[
+                {  
+                    "s":"",
+                    "p":"requires",
+                    "o":"password.level1A"
+                 },
+                 {  
+                    "s":"password.level1A",
+                    "p":"min-length",
+                    "o":"4"
+                 },
+                 {  
+                    "s":"password.level1A",
+                    "p":"max-length",
+                    "o":"16"
+                 },
+                 {
+                    "s":"password.level1A",
+                    "p":"complexity",
+                    "o":"MIXEDCASE"
+                 }
+            ]
+        }]]
+     },
+    "result":"VALID"
+}
+]

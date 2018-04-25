@@ -1,0 +1,3 @@
+cme log@{"Name":"cme log","Query":"SELECT Author, Message from CME.Device","TimeStamp":"Thu, 17 Mar 2016 20:21:43 GMT","Period":"-1"}
+Device Report@{"Name":"Device Report","Query":"Select id, Name from db.Devices","TimeStamp":"Fri, 08 Apr 2016 16:35:23 GMT","Period":"-1"}
+Log Report@{"Name":"Log Report","Query":" SELECT * from Log.Log","TimeStamp":"Fri, 08 Apr 2016 16:35:29 GMT","Period":"-1"}

@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://iti.illinois.edu/iti/pbconf/config#"
+     xml:base="http://iti.illinois.edu/iti/pbconf/config"
+     xmlns:core="http://iti.illinois.edu/iti/pbconf/core#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://iti.illinois.edu/iti/pbconf/config"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#anonymousftp -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#anonymousftp"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#authDNP -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#authDNP"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#authFTP -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#authFTP"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#authTelnet -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#authTelnet"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#authusers -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#authusers"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasAccessLoggingStt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasAccessLoggingStt"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasAlarmStt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasAlarmStt"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasDNP3Stt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasDNP3Stt"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasFTPStt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasFTPStt"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasGPSStt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasGPSStt"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasIPAddr -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasIPAddr"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasNTPStt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasNTPStt"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasPort5 -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasPort5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasAccessTimeout -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasAccessTimeout"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasByte1 -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasByte1"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasByte2 -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasByte2"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasByte3 -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasByte3"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasByte4 -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasByte4"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasLvl1APwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasLvl1APwd"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasLvl1Pwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasLvl1Pwd"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasLvl2Pwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasLvl2Pwd"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasLvlCPwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasLvlCPwd"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasMacAddr -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasMacAddr"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasRetryDelayed -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasRetryDelayed"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasTelnetPort -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasTelnetPort"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasTelnetTimeout -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasTelnetTimeout"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#IPAddress -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#IPAddress"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#LINUX -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#LINUX"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Person -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Person"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421 -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421Port5 -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421Port5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Adrian -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#Adrian">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Andy -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#Andy">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Ashwini -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#Ashwini">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Jeremy -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#Jeremy">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Joe -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#Joe">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#linuxa -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#linuxa">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#LINUX"/>
+        <core:authFTP rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Ashwini"/>
+        <core:authTelnet rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Ashwini"/>
+        <core:authDNP rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Ashwini"/>
+        <core:authDNP rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Jeremy"/>
+        <core:authFTP rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Jeremy"/>
+        <core:authTelnet rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Jeremy"/>
+        <core:authusers rdf:resource="http://iti.illinois.edu/iti/pbconf/core#on"/>
+        <core:anonymousftp rdf:resource="http://iti.illinois.edu/iti/pbconf/core#on"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#on -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#on"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICEA -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICEA">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421"/>
+        <core:hasAccessTimeout rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</core:hasAccessTimeout>
+        <core:hasLvlCPwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dsodinbqeor</core:hasLvlCPwd>
+        <core:hasLvl1APwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testPass</core:hasLvl1APwd>
+        <core:hasLvl2Pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testPass</core:hasLvl2Pwd>
+        <core:hasGPSStt rdf:resource="http://iti.illinois.edu/iti/pbconf/core#on"/>
+        <core:hasAccessLoggingStt rdf:resource="http://iti.illinois.edu/iti/pbconf/core#on"/>
+        <core:hasNTPStt rdf:resource="http://iti.illinois.edu/iti/pbconf/core#on"/>
+        <core:hasAlarmStt rdf:resource="http://iti.illinois.edu/iti/pbconf/core#on"/>
+        <core:hasPort5 rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICEA_port5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICEA_port5 -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICEA_port5">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421Port5"/>
+        <core:hasRetryDelayed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</core:hasRetryDelayed>
+        <core:hasTelnetTimeout rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</core:hasTelnetTimeout>
+        <core:hasTelnetPort rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</core:hasTelnetPort>
+        <core:hasAccessTimeout rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</core:hasAccessTimeout>
+        <core:hasMacAddr rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aa:bb:cc:dd:ee:ff</core:hasMacAddr>
+        <core:hasFTPStt rdf:resource="http://iti.illinois.edu/iti/pbconf/core#on"/>
+        <core:hasNTPStt rdf:resource="http://iti.illinois.edu/iti/pbconf/core#on"/>
+        <core:hasDNP3Stt rdf:resource="http://iti.illinois.edu/iti/pbconf/core#on"/>
+        <core:hasIPAddr rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICE_test_port5_ipaddrA"/>
+        <core:hasAllowedOperation rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICEB -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICEB">
+        <core:hasLvl1Pwd rdf:datatype="http://www.w3.org/2001/XMLSchema#string">testPass</core:hasLvl1Pwd>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICEB_port5 -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICEB_port5">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421Port5"/>
+        <core:hasTelnetTimeout rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</core:hasTelnetTimeout>
+        <core:hasRetryDelayed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</core:hasRetryDelayed>
+        <core:hasTelnetPort rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</core:hasTelnetPort>
+        <core:hasAccessTimeout rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</core:hasAccessTimeout>
+        <core:hasMacAddr rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aa:bb:cc:dd:ee:ff</core:hasMacAddr>
+        <core:hasDNP3Stt rdf:resource="http://iti.illinois.edu/iti/pbconf/core#on"/>
+        <core:hasNTPStt rdf:resource="http://iti.illinois.edu/iti/pbconf/core#on"/>
+        <core:hasFTPStt rdf:resource="http://iti.illinois.edu/iti/pbconf/core#on"/>
+        <core:hasIPAddr rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICE_test_port5_ipaddrA"/>
+        <core:hasAllowedOperation rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICE_test_port5_ipaddrA -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICE_test_port5_ipaddrA">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#IPAddress"/>
+        <core:hasByte3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</core:hasByte3>
+        <core:hasByte2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</core:hasByte2>
+        <core:hasByte1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</core:hasByte1>
+        <core:hasByte4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</core:hasByte4>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.4) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,18 @@
+[
+{
+    "input":{
+        "ontology":"policy",
+        "data":[{
+            "Class":"password.level10",
+            "Axioms":[
+                {  
+                    "s":"",
+                    "p":"max-length",
+                    "o":"20"
+                }
+            ]
+        }]
+     },
+    "result":"VALID"
+}
+]

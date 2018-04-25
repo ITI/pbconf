@@ -1,0 +1,33 @@
+#!/bin/sh
+# This script is intended to be used by source include, e.g. $ . ./env
+# ontology/Makefile requires 
+
+# defaults, YMMV
+script_dir=$(realpath .)
+ant_dir=$script_dir/apache-ant-1.9.7
+protoc_dir=/usr/local/protoc-3
+# normally silent except for errors
+
+
+JAVA_HOME=${JAVA_HOME:-$(/usr/libexec/java_home)}
+ANT_HOME=${ANT_HOME:-${ant_dir}}
+
+if [ ! $(which protoc) ]; then 
+  echo "Adding ${protoc_dir} to PATH"
+  PATH=${PATH}:${protoc_dir}
+  if [ ! $(which protoc) ]; then 
+    echo "ERROR: protoc not found."
+  fi
+fi
+
+if [ ! $(which ant) ]; then 
+  echo "Adding ${ANT_HOME}/bin to PATH"
+  PATH=${PATH}:${ANT_HOME}/bin
+  if [ ! $(which ant) ]; then 
+    echo "ERROR: ant not found."
+  fi
+fi
+
+if [ ! $(which java) ]; then
+  echo "ERROR: Did not find java. Please set up JDK and JAVA_HOME."
+fi

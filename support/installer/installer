@@ -1,0 +1,117 @@
+#!/usr/bin/env bash
+
+echo "Beginning Installation..."
+echo
+echo "Fist we must collect some info.  Select the default by just pressing enter"
+echo
+
+read -p "Node Name ($(hostname)): " nodename
+nodename=${nodename:-$(hostname)}
+read -p "Initial Admin User (root): " admin
+admin=${admin:-"root"}
+read -p "Initial Admin User Password (changeme): " adminpass
+adminpass=${adminpass:-"changeme"}
+read -p "Initial Admin User Email (root@localhost): " adminemail
+adminemail=${adminemail:-"root@localhost"}
+
+read -p "API Listener address (:8080): " apiport
+apiport=${apiport:-":8080"}
+read -p "SSH Broker Listener Address (:8022): " brokerport
+brokerport=${brokerport:-":8022"}
+read -p "Enable Web Interface (yes): " enableui
+enableui=${enableui:="yes"}
+if [ "${enableui}" = "yes" ]; then
+    read -p "Web Interface Listener Port: (:443): " uiport
+fi
+uiport=${uiport:-":443"}
+
+installdir=${PREFIX:-"/"}
+
+tar -C _files_ -cf - etc usr | tar -C ${installdir} -xvf -
+
+sanNames="${nodename},localhost"
+echo "Generating TLS certificate with Subject Alternative Names (SAN): $sanNames"
+san=${nodename}
+counter=20
+while [ -n "${san}" ] && [ ${counter} -gt 0 ]; do
+    read -p "Any other SAN to attach to the certificate? Press enter when done: " san
+    if [ -n "${san}" ]; then
+        sanNames="${sanNames},${san}"
+    fi
+    counter=$((counter-1))
+done
+
+${installdir}/usr/bin/pbconf-gencert -ca -host ${sanNames} -keyout ${installdir}/etc/pbconf/pbconf.pem -certout ${installdir}/etc/pbconf/trustedcerts/pbconf.pem
+
+echo -n "Generating ssh host key"
+if [ "${GENSSHKEY}" = "0" ]; then
+    echo " ...Skipping"
+else
+    echo
+    [ -f ${installdir}/etc/pbconf/ssh ] && rm ${installdir}/etc/pbconf/ssh ${installdir}/etc/pbconf/ssh.pub
+    ssh-keygen -f ${installdir}/etc/pbconf/ssh -N '' -t rsa
+fi
+
+echo "initializing change management repository"
+rpath=${installdir}/etc/pbconf/cmrepo
+
+if [ -e ${rpath} ]; then
+    mv ${rpath} ${rpath}-$(date "+%Y-%m-%d-%s")
+fi
+
+for p in "DEVICE" "POLICY" "REPORT"; do
+    mkdir -p ${rpath}/${p}
+    git init ${rpath}/${p}
+    cat << EOF > ${rpath}/${p}/README
+PBCONF Change Management repository for ${r}
+Created and initialized by PBCONF installer
+EOF
+
+    git -C ${rpath}/${p} add README
+    git -C ${rpath}/${p} commit -m 'Initialize repository'
+
+done
+
+oifs=$IFS
+IFS=$'\n'
+for r in $(cat ${installdir}/etc/pbconf/default_reports); do
+    rname=$(echo ${r} | awk -F@ '{print $1}')
+    rpt=$(echo ${r} | awk -F@ '{print $2}')
+
+    mkdir -p ${rpath}/REPORT/${rname}/data
+    echo ${rpt} > ${rpath}/REPORT/${rname}/data/queryFile
+    git -C ${rpath}/REPORT add ${rname}/data/queryFile
+done
+IFS=$oifs
+
+git -C ${rpath}/REPORT commit -m 'add initial default reports'
+
+echo "Installing database schema"
+[ -f ${installdir}/etc/pbconf/pbconf.db ] && mv ${installdir}/etc/pbconf/pbconf.db ${installdir}/etc/pbconf/pbconf-$(date "+%Y-%m-%d-%s").db
+
+sqlite3 ${installdir}/etc/pbconf/pbconf.db < ${installdir}/etc/pbconf/schema
+
+echo "Loading initial database values"
+echo "INSERT INTO Nodes (name) values ('${nodename}');" >> ${installdir}/etc/pbconf/defvalues
+
+${installdir}/usr/bin/pbconf-genpass -u ${admin} -p ${adminpass} -e ${adminemail} -r admin >>  ${installdir}/etc/pbconf/defvalues
+
+sqlite3 ${installdir}/etc/pbconf/pbconf.db < ${installdir}/etc/pbconf/defvalues
+
+if [ "$enableui" = "yes" ]; then
+    ui="true"
+else
+    ui="false"
+fi
+
+sed -i -e "s@%%NODE%%@${nodename}@g" ${installdir}/etc/pbconf/pbconf.conf
+sed -i -e "s@%%PREFIX%%@${installdir}@g" ${installdir}/etc/pbconf/pbconf.conf
+sed -i -e "s@%%UI_ENABLE%%@${ui}@g" ${installdir}/etc/pbconf/pbconf.conf
+sed -i -e "s@%%BROKER_PORT%%@${brokerport}@g" ${installdir}/etc/pbconf/pbconf.conf
+sed -i -e "s@%%UI_PORT%%@${uiport}@g" ${installdir}/etc/pbconf/pbconf.conf
+sed -i -e "s@%%API_PORT%%@${apiport}@g" ${installdir}/etc/pbconf/pbconf.conf
+
+REPO=$(cat ${installdir}/etc/pbconf/pbconf.conf | grep '^repopath' | awk -F= '{print $2}')
+
+echo "Cleaning up"
+rm ${installdir}/etc/pbconf/defvalues

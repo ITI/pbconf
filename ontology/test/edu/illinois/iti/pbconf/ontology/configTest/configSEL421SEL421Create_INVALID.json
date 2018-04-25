@@ -1,0 +1,37 @@
+[
+{
+    "input":{
+       "ontology":"config",
+       "ontologizer":"SEL421",
+       "individual":"sel421FAKEDEVICED",
+       "properties":[
+          {  
+             "Op":"service",
+             "Key":"hasGPSStt",
+             "Val":"on"
+          },
+          {  
+             "Op":"service",
+             "Key":"hasAlarmStt",
+             "Val":"on"
+          },
+          {  
+             "Op":"service",
+             "Key":"hasAccessLoggingStt",
+             "Val":"on"
+          },
+          {  
+             "Op":"service",
+             "Key":"hasPort5",
+             "Val":"sel421FAKEDEVICEC_port5_cfg"
+          },
+          {
+             "Op":"type",
+             "Key":"",
+             "Val":"SEL421"            
+          }
+       ]
+    },
+    "result":"INVALID"
+}
+]

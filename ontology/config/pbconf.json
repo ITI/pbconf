@@ -1,0 +1,28 @@
+{
+    "prefixes":[
+        {"prefix":"owl","iri":"http://www.w3.org/2002/07/owl"},
+        {"prefix":"pbconf","iri":"http://iti.illinois.edu/iti/pbconf/core"},
+        {"prefix":"config","iri":"http://iti.illinois.edu/iti/pbconf/config"},
+        {"prefix":"policy","iri":"http://iti.illinois.edu/iti/pbconf/policy"},
+        {"prefix":"partial","iri":"http://iti.illinois.edu/iti/pbconf/partial"}
+    ],
+    "ontologyDirectory":"owl",
+    "coreOntology":"pbconf",
+    "closedWorldOntology":"policy",
+    "policyOntology":"policy",
+    "configOntology":"config",
+    "partialConfigOntology":"partial",
+    "additionalOntologies":[
+        "http://iti.illinois.edu/iti/pbconf/policy"
+    ],
+    "closedWorldReasoners": {
+        "IndividualMustExist":"edu.illinois.iti.pbconf.ontology.validator.IndividualMustExist",
+        "IndividualMustHaveProperty":"edu.illinois.iti.pbconf.ontology.validator.IndividualMustHaveProperty",
+        "IndividualMustNotHaveProperty":"edu.illinois.iti.pbconf.ontology.validator.IndividualMustNotHaveProperty",
+        "IndividualPropertyRestrictions":"edu.illinois.iti.pbconf.ontology.validator.IndividualPropertyRestrictions",
+        "ClassMustExist":"edu.illinois.iti.pbconf.ontology.validator.ClassMustExist",
+        "ClassMustHaveProperty":"edu.illinois.iti.pbconf.ontology.validator.ClassMustHaveProperty",
+        "ClassMustNotHaveProperty":"edu.illinois.iti.pbconf.ontology.validator.ClassMustNotHaveProperty",
+        "ClassPropertyRestrictions":"edu.illinois.iti.pbconf.ontology.validator.ClassPropertyRestrictions"
+    }
+}

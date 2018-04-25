@@ -1,0 +1,49 @@
+// package tutorial;
+syntax = "proto3";
+option java_package = "edu.illinois.iti.pbconf.ontology";
+option java_outer_classname = "SEL421Proto";
+
+message IPAddress {
+  int32 byte1 = 1;
+  int32 byte2 = 2;
+  int32 byte3 = 3;
+  int32 byte4 = 4;
+}
+
+message SEL421Port5 {
+  IPAddress ipaddr = 1;
+}
+
+message SEL421 {
+  string name = 1;  
+  string lvlCPwd = 2;
+  string lvl1BPwd = 3;
+  string lvl1APwd = 4;
+  string lvl1OPwd = 5;
+  string lvl2Pwd = 6;
+  string lvl1Pwd = 7;
+  string lvl1PPwd = 8;
+  // bool alarmStt = 9;
+  // bool accessLoggingStt = 10;
+  // bool gpsStt = 11;
+  // SEL421Port5 sel421Port5 = 12;
+}
+
+message SEL421List {
+  repeated SEL421 sel421 = 1;
+}
+
+  // (+) Data property:
+  //   - <#hasLvlCPwd>:["Sel-1"^^xsd:string]
+  //   - <#hasLvl1BPwd>:["EDITH"^^xsd:string]
+  //   - <#hasLvl1APwd>:["VOLTA"^^xsd:string]
+  //   - <#hasLvl1OPwd>:["WATT"^^xsd:string]
+  //   - <#hasLvl2Pwd>:["TAIL"^^xsd:string]
+  //   - <#hasLvl1Pwd>:["OTTER"^^xsd:string]
+  //   - <#hasLvl1PPwd>:["AMPERE"^^xsd:string]
+
+  // (+) Object property:
+  //   - <#hasPort5>:[<#sel421FAKEDEVICEA_port5>]
+  //   - <#hasAlarmStt>:[<#on>]
+  //   - <#hasAccessLoggingStt>:[<#on>]
+  //   - <#hasGPSStt>:[<#on>]

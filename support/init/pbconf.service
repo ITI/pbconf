@@ -1,0 +1,9 @@
+[Unit]
+Description=PBCONF
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/pbconf -c /etc/pbconf/pbconf.conf
+
+[Install]
+WantedBy=multi-user.target

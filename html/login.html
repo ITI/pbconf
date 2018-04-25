@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/resource/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/resource/css/pbconf.css"/>
+    <link rel="shortcut icon" href="/resource/favicon.ico">
+    <title>PBCONF</title>
+  </head>
+
+  <body>
+<!-- Login screen -->
+<div class="container" align="center">
+    <div class="row">
+        <div class = "col-xs-offset-2 col-xs-8" align="center">
+        		<p>&nbsp;</p>
+                <p>&nbsp;</p> 
+                <img class="profile-img" src="/resource/iti_logo-640_sm.png"
+                    alt="Profile image">
+        		<p>&nbsp;</p>
+                <h3 class="login-title">Sign in to PBCONF</h3>
+                <form class="form-signin">
+                <input type="text" name="User" class="form-control login-cred" placeholder="Name" required autofocus>              
+                <input type="password" name="Pass" id="pass" class="form-control login-cred" placeholder="Password" required>
+                <button type="button" id="login_btn" class="btn btn-lg btn-primary btn-block btn-login" onclick="onLogin()">
+                    Sign in</button>  
+                </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/resource/js/jquery-2.1.4.js"></script>
+<script src="/resource/js/bootstrap.min.js"></script>
+<script src="/resource/js/login.js"></script>
+</html>

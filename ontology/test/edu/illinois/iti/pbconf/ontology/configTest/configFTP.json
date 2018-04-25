@@ -1,0 +1,32 @@
+[
+{
+    "input":{
+       "ontology":"config",
+       "ontologizer":"SEL421",
+       "individual":"sel421FAKEDEVICEB",
+       "properties":[
+          {  
+             "Op":"service",
+             "Key":"hasFTPStt",
+             "Val":"on"
+          }
+       ]
+    },
+    "result":"VALID"
+},
+{
+    "input":{
+       "ontology":"config",
+       "ontologizer":"SEL421",
+       "individual":"sel421FAKEDEVICEB",
+       "properties":[
+          {  
+             "Op":"service",
+             "Key":"hasFTPAnonStt",
+             "Val":"off"
+          }
+       ]
+    },
+    "result":"VALID"
+}
+]

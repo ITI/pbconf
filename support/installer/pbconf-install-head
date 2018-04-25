@@ -1,0 +1,103 @@
+#!/usr/bin/env bash
+
+pform=$(uname)
+if [ "${pform}" != "Linux" ]; then
+    echo "PBCONF Installer is only supported on linux"
+    exit 1
+fi
+
+DEBUG=0
+
+while getopts ":x:dp:" opt; do
+    case ${opt} in
+        x)
+            # Extract only
+            EO=${OPTARG}
+            ;;
+        d)
+            # debug
+            DEBUG=1
+            ;;
+        p)
+            # Prefix
+            export PREFIX=${OPTARG}
+            ;;
+        \?)
+            echo "Invalid agrument -${OPTARG}"
+            exit 1
+            ;;
+        :)
+            echo "Option -${OPTARG} requires an argument"
+            exit 1
+            ;;
+    esac
+done
+
+check_exe() {
+    prog=$1
+
+    f=$(which ${prog} 2>/dev/null)
+    [ "$?" = "0" ] && [ -x ${f} ] && echo ${f} && return 0
+    echo "Not Found"
+    return 1
+}
+
+echo "PBCONF Self extracting installer"
+echo
+
+echo "Checking depends"
+echo -n "sqlite3..."
+check_exe sqlite3
+if [ "$?" != "0" ]; then
+    echo "Please install sqlite3"
+    exit 1
+fi
+
+echo -n "Checking for ssh tools..."
+check_exe ssh-keygen
+if [ "$?" != "0" ]; then
+    echo "Automatic generation of host key not possible"
+    export GENSSHKEY=0
+fi
+
+echo -n "Checking for git..."
+check_exe git
+if [ "$?" != "0" ]; then
+    echo "Please install git"
+    exit 1
+fi
+
+echo -n "Checking for Java..."
+check_exe java
+if [ "$?" != "0" ]; then
+    echo "Please install a JRE (version 8 or better)"
+    exit 1
+fi
+
+if [ ! -z ${EO} ]; then
+    TMPDIR=${EO}
+    mkdir -p ${TMPDIR}
+else
+    export TMPDIR=$(mktemp -d /tmp/selfextract.XXXXXX)
+fi
+
+ARCHIVE=$(awk '/^__ARCHIVE_BELOW__/ {print NR + 1; exit 0; }' $0)
+tail -n+$ARCHIVE $0 | tar xz -C $TMPDIR
+
+[ ! -z ${EO} ] && exit 0
+
+CDIR=$(pwd)
+cd $TMPDIR || exit 1
+./installer
+
+cd $CDIR || exit 1
+
+if [ "${DEBUG}" = "1" ]; then
+    echo "Tempdir: ${TMPDIR}"
+else
+    rm -rf $TMPDIR
+fi
+
+exit 0
+
+__ARCHIVE_BELOW__

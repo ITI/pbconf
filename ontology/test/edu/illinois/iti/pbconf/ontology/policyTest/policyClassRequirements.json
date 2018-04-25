@@ -1,0 +1,23 @@
+[
+{
+    "input":{
+        "ontology":"policy",
+        "data":[[{
+            "Class":"SEL421",
+            "Axioms":[
+                {  
+                  "s":"ntp",
+                  "p":"state",
+                  "o":"on"
+               },
+               {  
+                  "s":"accessTimeout",
+                  "p":"gte",
+                  "o":"20"
+               }
+            ]
+        }]]
+     },
+    "result":"VALID"
+}
+]

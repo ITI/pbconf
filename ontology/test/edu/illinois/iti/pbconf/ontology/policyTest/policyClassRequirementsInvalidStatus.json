@@ -1,0 +1,23 @@
+[
+{
+    "input":{
+        "ontology":"policy",
+        "data":[[{
+            "Class":"class",
+            "Axioms":[
+               {  
+                  "s":"ntp",
+                  "p":"status",
+                  "o":"off"
+               },
+               {  
+                  "s":"gps",
+                  "p":"state",
+                  "o":"off"
+               }
+            ]
+        }]]
+     },
+    "result":"VALID"
+}
+]

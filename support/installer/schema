@@ -1,0 +1,63 @@
+CREATE TABLE Users(
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    passwordHash TEXT,
+    email TEXT,
+    role TEXT
+);
+
+CREATE TABLE DeviceConfigItems(
+    id INTEGER PRIMARY KEY,
+    key TEXT,
+    value TEXT
+);
+
+CREATE TABLE Devices(
+    id INTEGER PRIMARY KEY,
+    name TEXT UNIQUE,
+    parentNode INTEGER,
+    FOREIGN KEY(parentNode) REFERENCES Nodes(id)
+);
+
+CREATE TABLE DeviceConfigLines(
+    device INTEGER,
+    deviceConfigItem INTEGER,
+    FOREIGN KEY(device) REFERENCES Devices(id),
+    FOREIGN KEY(deviceConfigItem) REFERENCES DeviceConfigItems(id)
+);
+
+CREATE TABLE Nodes(
+    id INTEGER PRIMARY KEY,
+    name TEXT UNIQUE
+);
+
+CREATE TABLE ConfigItems(
+    id INTEGER PRIMARY KEY,
+    key TEXT,
+    value TEXT
+);
+
+CREATE TABLE ConfigLines(
+    node INTEGER,
+    configItem INTEGER,
+    FOREIGN KEY(node) REFERENCES Nodes(id),
+    FOREIGN KEY(configItem) REFERENCES ConfigItems(id)
+);
+
+CREATE TABLE Log(
+    tableName TEXT UNIQUE,
+    lastModified DATETIME
+);
+
+CREATE TRIGGER IF NOT EXISTS NodesTrigger AFTER INSERT ON Nodes
+ BEGIN
+    INSERT OR REPLACE INTO Log(tablename, LastModified) Values('Nodes', datetime('now'));
+ END;
+CREATE TRIGGER IF NOT EXISTS DevicesTrigger AFTER INSERT ON Devices
+BEGIN
+    INSERT OR REPLACE INTO Log(tablename, LastModified) Values('Devices', datetime('now'));
+END;
+CREATE TRIGGER IF NOT EXISTS DevicesDelTrigger AFTER DELETE ON Devices
+BEGIN
+    INSERT OR REPLACE INTO Log(tablename, LastModified) Values('Devices', datetime('now'));
+END;

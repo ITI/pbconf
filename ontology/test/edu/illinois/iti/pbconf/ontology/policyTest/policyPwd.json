@@ -1,0 +1,23 @@
+[
+{
+    "input":{
+        "ontology":"policy",
+        "data":[{
+            "Class":"SEL421",
+            "Axioms":[
+                {  
+                    "s":"password",
+                    "o":"min-length",
+                    "p":4
+                 },
+                 {  
+                    "s":"password",
+                    "o":"max-length",
+                    "p":16
+                 }
+            ]
+        }]
+     },
+    "result":"VALID"
+}
+]

@@ -1,0 +1,7 @@
+#! /bin/bash
+SCRIPT=$(realpath "$0")
+SCRIPT_DIR=$(dirname "$SCRIPT")
+cd $SCRIPT_DIR/..
+
+java -cp ":./lib/*:./lib/log4j/*:./build/classes" edu.illinois.iti.pbconf.ontology.OntologyServer
+

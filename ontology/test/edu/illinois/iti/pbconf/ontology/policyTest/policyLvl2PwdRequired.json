@@ -1,0 +1,19 @@
+[
+{
+    "input":{
+        "ontology":"policy",
+        "ontologizer":"SEL421",
+        "data":[[{
+            "Class":"SEL421",
+            "Axioms":[
+                {  
+                    "s":"",
+                    "p":"requires",
+                    "o":"password.level2"
+                }
+            ]
+        }]]
+     },
+    "result":"VALID"
+}
+]

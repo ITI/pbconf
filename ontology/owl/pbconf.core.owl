@@ -1,0 +1,1880 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://iti.illinois.edu/iti/pbconf/core#"
+     xml:base="http://iti.illinois.edu/iti/pbconf/core"
+     xmlns:pbconf="http://iti.illinois.edu/iti/pbconf/core#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:pbconf1="http://iti.illinois.edu/iti/pbconf#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://iti.illinois.edu/iti/pbconf/core">
+        <owl:versionIRI rdf:resource="http://iti.illinois.edu/iti/pbconf/core/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#authDNP -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#authDNP">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#authTelnet"/>
+                <owl:someValuesFrom rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Person"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#authFTP -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#authFTP">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#authTelnet"/>
+                <owl:someValuesFrom rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Person"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#authTelnet -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#authTelnet">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#authTelnet"/>
+                <owl:someValuesFrom rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Person"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasAccessLoggingStt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasAccessLoggingStt">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasAlarmStt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasAlarmStt">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasCertificateAuthority -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasCertificateAuthority"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasDNP3Stt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasDNP3Stt">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasDigitalCertificate -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasDigitalCertificate"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasDstIPAddr -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasDstIPAddr">
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#IPAddress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasFTPAnonStt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasFTPAnonStt">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasFTPStt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasFTPStt">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasFirewallPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasFirewallPolicy"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasGPSStt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasGPSStt">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasIEC61850Stt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasIEC61850Stt">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasIPAddr -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasIPAddr">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#IPAddress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasNTPStt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasNTPStt">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasPingStt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasPingStt">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasPort5 -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasPort5">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421Port5"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgO -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgO"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasRole">
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasRouterIPAddr -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasRouterIPAddr">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#IPAddress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgO -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgO"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasSrcIPAddr -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasSrcIPAddr">
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#IPAddress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasStt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasStt">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasTelnetStt -->
+
+    <owl:ObjectProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasTelnetStt">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgO"/>
+        <rdfs:range rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasAccessTimeout -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasAccessTimeout">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgD"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasAction -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasAction">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasByte -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasByte">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">255</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasByte1 -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasByte1">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasByte"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasByte2 -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasByte2">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasByte"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasByte3 -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasByte3">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasByte"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasByte4 -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasByte4">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasByte"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasDstPort -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasDstPort">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasExpirationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasExpirationDate"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasLvl1APwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasLvl1APwd">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPwd"/>
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgD"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasLvl1BPwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasLvl1BPwd">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPwd"/>
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgD"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasLvl1OPwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasLvl1OPwd">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPwd"/>
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgD"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasLvl1PPwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasLvl1PPwd">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPwd"/>
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgD"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasLvl1Pwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasLvl1Pwd">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPwd"/>
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgD"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasLvl2Pwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasLvl2Pwd">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPwd"/>
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgD"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasLvlCPwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasLvlCPwd">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPwd"/>
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgD"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasMACAddr -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasMACAddr">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgD"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasOrder -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasOrder">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasPort -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasPort">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65535</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgD -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgD"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasPwd -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasPwd">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasRetryDelayed -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasRetryDelayed">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgD"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgD -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasSEL421CfgD">
+        <rdfs:comment>data properties must have different name than object properties; otherwise, Protege misbehaves</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasSrcPort -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasSrcPort">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasTelnetPort -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasTelnetPort">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort"/>
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgD"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#hasTelnetTimeout -->
+
+    <owl:DatatypeProperty rdf:about="http://iti.illinois.edu/iti/pbconf/core#hasTelnetTimeout">
+        <rdfs:subPropertyOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPort5CfgD"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Accept -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Accept">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAction"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#FirewallAction"/>
+        <owl:disjointWith rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Deny"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Accept_Telnet_IG -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Accept_Telnet_IG">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#O2"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#Packet"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasDstPort"/>
+                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Accept"/>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#FirewallPolicy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#AccessControl -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#AccessControl">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#AccessLogging -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#AccessLogging">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAccessLoggingStt"/>
+                <owl:someValuesFrom rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#AccessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#AccessTimeout -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#AccessTimeout">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAccessTimeout"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#AccessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#AcessLevel -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#AcessLevel">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#RoleBasedAccessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Administrator -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Administrator">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#Role"/>
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel2"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Alarm -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Alarm">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAlarmStt"/>
+                <owl:someValuesFrom rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#AccessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Authentication -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Authentication">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#AuthenticationMethod -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#AuthenticationMethod">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Authentication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#AutomationProtocol -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#AutomationProtocol">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#FunctionalProtocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#BadAuthentication -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#BadAuthentication">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#AuthenticationMethod"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#CertificateAuthority -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#CertificateAuthority">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#PublicKeyInfrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#CertificateBasedAuthentication -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#CertificateBasedAuthentication">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasCertificateAuthority"/>
+                        <owl:someValuesFrom rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CertificateAuthority"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasDigitalCertificate"/>
+                        <owl:someValuesFrom rdf:resource="http://iti.illinois.edu/iti/pbconf/core#DigitalCertificate"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#AuthenticationMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Communication -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Communication">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#DomainConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#CommunicationDevice -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#CommunicationDevice">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Communication"/>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SubstationDevice"/>
+        <owl:disjointWith rdf:resource="http://iti.illinois.edu/iti/pbconf/core#PowerDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#CommunicationInterface -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#CommunicationInterface">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Communication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#CommunicationProtocol -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#CommunicationProtocol">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Communication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#CryptographicProtocol -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#CryptographicProtocol">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CommunicationProtocol"/>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#NetworkSecurity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#DefaultPassword -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#DefaultPassword">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasLvl2Pwd"/>
+                <owl:hasValue>TAIL</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#BadAuthentication"/>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#PasswordBasedAuthentication"/>
+        <rdfs:comment>A default password was used.</rdfs:comment>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://iti.illinois.edu/iti/pbconf/core#DefaultPassword"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#equivalentClass"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasLvl2Pwd"/>
+                <owl:hasValue>TAIL</owl:hasValue>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+        <rdfs:comment>A known default password value has been used for Level 2 password.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://iti.illinois.edu/iti/pbconf/core#DefaultPassword"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:resource="http://iti.illinois.edu/iti/pbconf/core#BadAuthentication"/>
+        <rdfs:comment>A default password is a severe security risk.</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Deny -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Deny">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAction"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#FirewallAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Deny_By_Default -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Deny_By_Default">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#O3"/>
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#Packet"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Deny"/>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#FirewallPolicy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Deny_HTTP_IG -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Deny_HTTP_IG">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#O1"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#Packet"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasDstPort"/>
+                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Deny"/>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#FirewallPolicy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#DigitalCertificate -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#DigitalCertificate">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#PublicKeyInfrastructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#DomainConcept -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#DomainConcept"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#ExpiredCertificate -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#ExpiredCertificate">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasExpirationDate"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20151123</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#BadAuthentication"/>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CertificateBasedAuthentication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Firewall -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Firewall">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CommunicationDevice"/>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#NetworkSecurity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#FirewallAction -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#FirewallAction">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Firewall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#FirewallOrder -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#FirewallOrder">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Firewall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#FirewallPolicy -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#FirewallPolicy">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Firewall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#FunctionalProtocol -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#FunctionalProtocol">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CommunicationProtocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#IPAddress -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#IPAddress">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasByte1"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasByte2"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasByte3"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasByte4"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Miscellaneous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#IntelligentElectronicDevice -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#IntelligentElectronicDevice">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#PowerDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#IntrusionDetectionSystem -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#IntrusionDetectionSystem">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CommunicationDevice"/>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#NetworkSecurity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#LINUX -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#LINUX">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Relay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#LowComplexityPassword -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#LowComplexityPassword">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPwd"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:pattern>[A-Z]*</xsd:pattern>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#BadAuthentication"/>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#PasswordBasedAuthentication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Maintainer -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Maintainer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#Role"/>
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Miscellaneous -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Miscellaneous"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#NetworkRouter -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#NetworkRouter">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CommunicationDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#NetworkSecurity -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#NetworkSecurity">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#NetworkSwitch -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#NetworkSwitch">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CommunicationDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#O1 -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#O1">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasOrder"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#FirewallOrder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#O2 -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#O2">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasOrder"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#FirewallOrder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#O3 -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#O3">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasOrder"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#FirewallOrder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Operation -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Operation">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#RoleBasedAccessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Packet -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Packet">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasDstIPAddr"/>
+                        <owl:someValuesFrom rdf:resource="http://iti.illinois.edu/iti/pbconf/core#IPAddress"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasSrcIPAddr"/>
+                        <owl:someValuesFrom rdf:resource="http://iti.illinois.edu/iti/pbconf/core#IPAddress"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasDstPort"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasSrcPort"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Miscellaneous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#PasswordBasedAuthentication -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#PasswordBasedAuthentication">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPwd"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#AuthenticationMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Person -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Person">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#RoleBasedAccessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#PowerDevice -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#PowerDevice">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SubstationDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#PublicKeyInfrastructure -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#PublicKeyInfrastructure">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Authentication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Relay -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Relay">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#IntelligentElectronicDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#RemoteTerminalUnit -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#RemoteTerminalUnit">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#PowerDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#RetryDelayed -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#RetryDelayed">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasRetryDelayed"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#AccessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Role -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Role">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#RoleBasedAccessControl"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#RoleBasedAccessControl -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#RoleBasedAccessControl">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#AccessControl"/>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#DomainConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421 -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Relay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#AcessLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel0 -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel0">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1 -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1A -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1A">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1B -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1B">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_breaker_control_and_data"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1O -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1O">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_output_setting"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1P -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1P">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_protection_setting"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel2 -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel2">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_breaker_control_and_data"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_output_setting"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_protection_setting"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevelC -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevelC">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_calibration"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation"/>
+                        <owl:hasValue rdf:resource="http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421CommunicationInterface -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421CommunicationInterface">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CommunicationInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421Operation -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421Operation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting"/>
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_breaker_control_and_data"/>
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_calibration"/>
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_output_setting"/>
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_protection_setting"/>
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics"/>
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421Port1 -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421Port1">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421CommunicationInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421Port2 -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421Port2">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421CommunicationInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421Port3 -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421Port3">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421CommunicationInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421Port5 -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421Port5">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421CommunicationInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SEL421PortF -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421PortF">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421CommunicationInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SELEmployee -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SELEmployee">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#Role"/>
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevelC"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Security -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Security">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#DomainConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#ShortPassword -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#ShortPassword">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://iti.illinois.edu/iti/pbconf/core#hasPwd"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</xsd:maxLength>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#BadAuthentication"/>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#PasswordBasedAuthentication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Status -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Status">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#off"/>
+                    <rdf:Description rdf:about="http://iti.illinois.edu/iti/pbconf/core#on"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Miscellaneous"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#SubstationDevice -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#SubstationDevice">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#DomainConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Test_HTTP_Packet -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Test_HTTP_Packet">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Packet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Test_Telnet_Packet -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#Test_Telnet_Packet"/>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#TimeSynchronizationProtocol -->
+
+    <owl:Class rdf:about="http://iti.illinois.edu/iti/pbconf/core#TimeSynchronizationProtocol">
+        <rdfs:subClassOf rdf:resource="http://iti.illinois.edu/iti/pbconf/core#FunctionalProtocol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Alex -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#Alex">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Person"/>
+        <hasRole rdf:resource="http://iti.illinois.edu/iti/pbconf/core#admin1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#Bob -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#Bob">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Person"/>
+        <hasRole rdf:resource="http://iti.illinois.edu/iti/pbconf/core#maintainer1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#admin1 -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#admin1">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Administrator"/>
+        <hasDigitalCertificate rdf:resource="http://iti.illinois.edu/iti/pbconf/core#cert1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#can -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#can">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#AutomationProtocol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#cert1 -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#cert1">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#DigitalCertificate"/>
+        <hasExpirationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">20161122</hasExpirationDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#digicert -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#digicert">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CertificateAuthority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#dnp3 -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#dnp3">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#AutomationProtocol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#ftp -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#ftp">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CommunicationProtocol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#gps -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#gps">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#TimeSynchronizationProtocol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#iec61820 -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#iec61820">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#AutomationProtocol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#maintainer1 -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#maintainer1">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Maintainer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#modbus -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#modbus">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#AutomationProtocol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#ntp -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#ntp">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CommunicationProtocol"/>
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#TimeSynchronizationProtocol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#off -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#off">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#on -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#on">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#ping -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#ping">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CommunicationProtocol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#router1_ipaddr -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#router1_ipaddr">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#IPAddress"/>
+        <hasByte1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasByte1>
+        <hasByte2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasByte2>
+        <hasByte3 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasByte3>
+        <hasByte4 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasByte4>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421Operation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#sel421_breaker_control_and_data -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_breaker_control_and_data">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421Operation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#sel421_calibration -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_calibration">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421Operation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#sel421_output_setting -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_output_setting">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421Operation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#sel421_protection_setting -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_protection_setting">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421Operation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421Operation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#SEL421Operation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#ssh -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#ssh">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CryptographicProtocol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#symantec -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#symantec">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CertificateAuthority"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#telnet -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#telnet">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CommunicationProtocol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#tcp/ip -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#tcp/ip">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CommunicationProtocol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://iti.illinois.edu/iti/pbconf/core#tls/ssl -->
+
+    <owl:NamedIndividual rdf:about="http://iti.illinois.edu/iti/pbconf/core#tls/ssl">
+        <rdf:type rdf:resource="http://iti.illinois.edu/iti/pbconf/core#CryptographicProtocol"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+

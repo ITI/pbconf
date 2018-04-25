@@ -1,0 +1,433 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css"
+	href="/resource/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="/resource/css/bootstrap-treeview.min.css" />
+<link rel="stylesheet" href="/resource/css/pbconf.css" />
+<link rel="stylesheet" type="text/css"
+	href="resource/css/sortable-theme-bootstrap.css" />
+<link rel="shortcut icon" href="/resource/favicon.ico">
+<title>PBCONF</title>
+
+</head>
+
+<body data-senna onload="handleNavigation()">
+	<nav class="navbar navbar-inverse navbar-static-top navbar-pbconf">
+		<div class="container">
+			<!-- Navigation bar on top -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">PBCONF</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active" id="home"><a href="/ui?home">Home</a></li>
+					<li id="nodes_link"><a href="/ui?nodes" id="nodes">Nodes</a></li>
+					<li id="devices_link"><a href="/ui?devices" id="devices">Devices</a></li>
+					<li id="policies_link"><a href="/ui?policies" id="policies">Policies</a></li>
+					<li id="reports_link"><a href="/ui?reports" id="reports">Reports</a></li>
+				</ul>
+				<ul class="nav navbar-right">
+					<li>
+						<button type="button" class="btn btn-logout navbar-btn"
+							onclick="onLogout()">Logout</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Div that will be controlled by SennaJS -->
+	<div class="container" id="pbconf_surface"></div>
+
+	<div id="UserName" class="hidden">{{.Name}}</div>
+	<div id="UserRole" class="hidden">{{.Role}}</div>
+	<div id="EnableLogPoll" class="hidden">{{.EnableLongPoll}}</div>
+	<div class="container">
+		<!-- Dashboard view here -->
+		<div id="home-view">
+			<!-- Node explorer -->
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="panel panel-default panel-indigo drop-shadow">
+						<div class="panel-heading">
+							<h3 class="panel-title">Node Explorer</h3>
+						</div>
+						<div class="col-xs-5">
+							<p>&nbsp;</p>
+							<!-- Form to search nodes and devices -->
+							<div class="form-group">
+								<label for="input-search" class="sr-only">Search Tree:</label> <input
+									type="text" class="form-control" id="input-search"
+									placeholder="Search nodes and devices..." value="">
+							</div>
+							<div class="checkbox">
+								<label> <input type="checkbox" class="checkbox"
+									id="chk-ignore-case" value="false"> Case Sensitive
+								</label>
+							</div>
+							<div class="checkbox">
+								<label> <input type="checkbox" class="checkbox"
+									id="chk-exact-match" value="false"> Exact Match
+								</label>
+							</div>
+							<button type="button" class="btn btn-save" id="btn-search">Search</button>
+							<button type="button" class="btn btn-default"
+								id="btn-clear-search">Clear</button>
+							<!-- </form> -->
+						</div>
+						<!-- Treeview with nodes and devices -->
+						<div class="col-xs-7">
+							<p>&nbsp;</p>
+							<div id="treeview-searchable" class=""></div>
+						</div>
+						<div class="panel-body" id="dashboard-nodes"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<!-- Reports view on dashboard -->
+				<div class="col-xs-5">
+					<div class="panel panel-default panel-chartreuse drop-shadow">
+						<div class="panel-heading">
+							<h3 class="panel-title">Reports</h3>
+						</div>
+						<div class="panel-body report-pane" id="dashboard-reports"></div>
+					</div>
+				</div>
+				<!-- Alarms view on dashboard -->
+				<div class="col-xs-7">
+					<div class="panel panel-default panel-gold drop-shadow">
+						<div class="panel-heading">
+							<h3 class="panel-title">Alarms</h3>
+						</div>
+						<div class="panel-body" id="dashboard-alarms">
+							<div class="checkbox-inline alarm-checkbox hidden"
+								id="alarm-checkbox-div">
+								&nbsp; <label><input type="checkbox" value=""
+									id="alarm-select">&nbsp;&nbsp;</label>
+							</div>
+
+							<button type="button" id="clear-alarms"
+								class="btn btn-default hidden">Clear Selected</button>
+
+							<div id="alarm-list" class="alarm-pane">
+								<form action="">
+									<table id="alarm-table">
+									</table>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Nodes screen -->
+		<div id="node-view" class="hidden">
+			<!-- Table displaying nodes -->
+			<table class="table table-striped table-hover table-responsive">
+				<thead>
+					<th>Id</th>
+					<th>Node</th>
+					<th>Check in time</th>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<!-- This does not appear to be used since there's no "Add Node" functionality in the GUI -->
+			<div id="add-new-node" class="row">
+				<div class="form-group col-xs-8">
+					<input type="text" name="Name" id="new-node-name"
+						class="form-control" placeholder="Node Name">
+				</div>
+				<div class="form-group col-xs-4">
+					<button type="button" class="btn btn-default" id="new-node-btn"
+						onclick="onAddNode()">Add New</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Devices screen -->
+		<div id="device-view" class="hidden">
+			<table class="table table-striped table-hover table-responsive">
+				<thead>
+					<th class="col-xs-2">Id</th>
+					<th class="col-xs-3">Name</th>
+					<th class="col-xs-2">Parent Node</th>
+					<th class="col-xs-5"></th>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<div id="add-new-device" class="row">
+				<div class="form-group col-xs-8">
+					<input type="text" name="Name" id="new-device-name"
+						class="form-control" placeholder="Device Name">
+				</div>
+				<div class="form-group col-xs-4">
+					<button type="button" class="btn btn-default btn-save"
+						id="new-device-btn" onclick="onAddDevice()"
+						disabled='disabled'>Add New</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Policies screen -->
+		<div id="policies-view" class="hidden">
+			<table class="table table-striped table-hover table-responsive">
+				<thead>
+					<th>Name</th>
+					<th></th>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<div id="add-new-policy" class="row">
+				<div class="form-group col-xs-8">
+					<input type="text" name="Name" class="form-control"
+						id="new-policy-name" placeholder="Policy Name">
+				</div>
+				<div class="form-group col-xs-4">
+					<button type="button" class="btn btn-default btn-save"
+						id="new-policy-btn" onclick="onAddPolicy()"
+						disabled='disabled'>Add New</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Reports screen -->
+		<div id="reports-view" class="hidden">
+			<table class="table table-striped table-hover">
+				<thead>
+					<th>Name</th>
+					<th></th>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<div id="add-new-report" class="row">
+				<div class="form-group col-xs-8">
+					<input type="text" name="Name" class="form-control"
+						id="new-report-name" placeholder="Report Name">
+				</div>
+				<div class="form-group col-xs-4">
+					<button type="button" class="btn btn-default btn-save"
+						id="new-report-btn" onclick="onAddReport()"
+						disabled='disabled'>Add New</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Nodes configuration screen -->
+		<div id="config-view" class="hidden">
+			<h3></h3>
+			<table class="table table-striped table-hover table-responsive">
+				<thead>
+					<th class="col-xs-4">Item</th>
+					<th class="col-xs-4">Value</th>
+					<th class="col-xs-4"></th>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<div id="add-new-cfgItem" class="row">
+				<div class="form-group col-xs-4">
+					<input type="text" name="Key" class="form-control"
+						id="new-config-att" placeholder="Attribute Name">
+				</div>
+				<div class="form-group col-xs-4">
+					<input type="text" name="Value" class="form-control"
+						id="new-config-att" placeholder="Attribute Value">
+				</div>
+				<div class="form-group col-xs-4">
+					<button type="button" class="btn btn-default btn-save"
+						id="new-config-btn" onclick="onAddCfgItem()"
+						disabled='disabled'>Add New</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Device configuration screen -->
+		<div id="device-config-view" class="hidden">
+			<h3></h3>
+			<table class="table table-striped table-hover table-responsive">
+				<thead>
+					<th class="col-xs-4">Item</th>
+					<th class="col-xs-6">Value</th>
+					<th class="col-xs-2"></th>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<div id="add-new-devCfgItem" class="row">
+				<div class="form-group col-xs-4">
+					<input type="text" name="Key" class="form-control"
+						id="devcfg-att-name" placeholder="Attribute Name">
+				</div>
+				<div class="form-group col-xs-4">
+					<input type="text" name="Value" class="form-control"
+						id="devcfg-att-val" placeholder="Attribute Value">
+				</div>
+				<div class="form-group col-xs-4">
+					<button type="button" class="btn btn-default btn-save"
+						id="devcfg-att-btn" onclick="onAddDevCfgItem()"
+						disabled='disabled'>Add New</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Device config file screen -->
+		<div id="device-configFile-view" class="hidden">
+			<h4>&nbsp;</h4>
+			<div class="row">
+				<div class="form-control" id="configFile-content"></div>
+			</div>
+			<div class="row">
+				<div id="msg-devCfgFile" class="col-xs-5">
+					<input type="text" name="commit-msg" class="form-control"
+						id="dev-cfg-chng" placeholder="Change Message">
+				</div>
+				<div id="update-devCfgFile" class="col-xs-7">
+					<button type="button" class="btn btn-default btn-save"
+						id="dev-cfg-save-btn" onclick="onSaveDevCfgFile()">Save
+						Changes</button>
+					<button type="button" class="btn btn-default btn-cancel"
+						onclick="onCancelDevCfgFile()">Cancel</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Device metadata screen -->
+		<div id="device-metaFile-view" class="hidden">
+			<h4></h4>
+			<table class="table table-striped table-hover table-responsive"
+				style="table-layout: fixed;width=95%">
+				<thead>
+					<th class="col-xs-3">Item</th>
+					<th class="col-xs-7">Value</th>
+					<th class="col-xs-2"></th>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<div id="add-new-devMeta" class="row">
+				<div class="form-group col-xs-4">
+					<input type="text" name="Key" class="form-control"
+						id="devmeta-att-name" placeholder="Attribute Name">
+				</div>
+				<div class="form-group col-xs-4">
+					<input type="text" name="Value" class="form-control"
+						id="devmeta-att-val" placeholder="Attribute Value">
+				</div>
+				<div class="form-group col-xs-4">
+					<button type="button" class="btn btn-default btn-save"
+						id="devmeta-att-btn" onclick="onAddDevMetaItem()"
+						disabled='disabled'>Add New</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Policy file screen -->
+		<div id="policyFile-view" class="hidden">
+			<h4></h4>
+			<div class="row">
+				<div class="form-control" id="policyFile-content"></div>
+			</div>
+			<div class="row">
+				<div id="msg-policyFile" class="col-xs-4">
+					<input type="text" name="pol-commit-msg" class="form-control"
+						id="policyfile-change-msg" placeholder="Change Message">
+				</div>
+				<div id="update-policyFile" class="col-xs-8">
+					<button type="button" class="btn btn-default btn-save"
+						id="policyfile-change-btn" onclick="onSavePolicyFile()">Save
+						Changes</button>
+					<button type="button" class="btn btn-default btn-cancel"
+						onclick="onCancelPolicyFile()">Cancel</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Report file screen -->
+		<div id="reportFile-view" class="hidden">
+			<h4></h4>
+			<div class="form-control" id="reportFile-query"></div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div id="period-reportFile">
+						<div class="input-group">
+							<span class="input-group-addon"> <input type="checkbox"
+								name="periodic-checkbox" aria-label="...">
+							</span> <input type="text" class="form-control" name="period-text"
+								aria-label="..." id="reportFile-query-period"
+								placeholder="Run the query at period">
+						</div>
+						<!-- /input-group -->
+					</div>
+					<!-- /.col-lg-6 -->
+				</div>
+			</div>
+			<div class="row" style="padding-top: 5px">
+				<div id="msg-reportFile" class="col-xs-12">
+					<input type="text" name="report-commit-msg" class="form-control"
+						id="report-commit-msg" placeholder="Change Message">
+				</div>
+			</div>
+			<div class="row" style="padding-top: 5px">
+				<div class="col-xs-12" style="padding-top: 5px">
+					<div id="update-reportFile">
+						<button type="button" class="btn btn-default btn-save"
+							disabled='disabled' id="rpt-button-save"
+							onclick="onSaveReportFile()">Save Changes</button>
+						<button type="button" class="btn btn-default btn-cancel"
+							disabled='disabled' id="rpt-button-cancel"
+							onclick="onCancelReportFile()">Cancel</button>
+						<button type="button" id="runReport"
+							class="btn btn-default btn-run" disabled='disabled'
+							onclick="onRunReportFile()">Run Now</button>
+						<button type="button" class="btn btn-default btn-run"
+							disabled='disabled' id="rpt-button-export"
+							onclick="$('#report-res-table').tableExport({type:'pdf',escape:'false'});">Export
+							Results</button>
+
+					</div>
+				</div>
+			</div>
+			<div class="row" style="padding-top: 5px">
+				<div id="reportFile-content" class="col-xs-6"></div>
+			</div>
+		</div>
+	</div>
+
+</body>
+<script src="/resource/js/jquery-2.1.4.js" type="text/javascript"></script>
+<script src="/resource/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/resource/js/pbconf.js" type="text/javascript"></script>
+<script src="/resource/js/senna-min.js" type="text/javascript"></script>
+<script src="/resource/js/pbc-senna-nav.js" type="text/javascript"></script>
+<script src="/resource/js/bootstrap-treeview.min.js"
+	type="text/javascript"></script>
+<!-- Sortable table for report results -->
+<script src="resource/js/sortable.min.js" type="text/javascript"></script>
+<!-- Exporting report results -->
+<script type="text/javascript" src="/resource/js/tableExport.js"></script>
+<script type="text/javascript" src="/resource/js/jquery.base64.js"></script>
+<script type="text/javascript" src="/resource/js/jspdf/libs/sprintf.js"></script>
+<script type="text/javascript" src="/resource/js/jspdf/jspdf.js"></script>
+<script type="text/javascript" src="/resource/js/jspdf/libs/base64.js"></script>
+</html>

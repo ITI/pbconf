@@ -1,0 +1,24 @@
+{  
+    "iri":"http://iti.illinois.edu/iti/pbconf/config#sel421FAKEDEVICEB",
+    "ontology":"http://iti.illinois.edu/iti/pbconf/config",
+    "name":"sel421FAKEDEVICEB",
+    "class":"sel421",
+    "properties":[  
+       {  
+          "Op":"variable",
+          "Key":"foo",
+          "Val":"bars"
+       },
+       {  
+          "Op":"password",
+          "Key":"2",
+          "Val":"TAIL"
+       },
+       {  
+          "Op":"service",
+          "Key":"ftp",
+          "Val":"on"
+       }
+    ]
+ }
+    

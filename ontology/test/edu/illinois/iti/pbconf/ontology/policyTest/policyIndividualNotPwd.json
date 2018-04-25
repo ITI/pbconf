@@ -1,0 +1,18 @@
+[
+{
+    "input":{
+        "ontology":"policy",
+        "data":[[{
+            "Class":"sel421FAKEDEVICEA",
+            "Axioms":[
+                {  
+                    "s":"",
+                    "p":"requires",
+                    "o":"password.level1B"
+                 }
+            ]
+        }]]
+     },
+    "result":"VALID"
+}
+]

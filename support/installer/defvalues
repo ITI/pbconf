@@ -1,0 +1,10 @@
+INSERT INTO ConfigItems (key, value) values('ReportTimer', "5s");
+INSERT INTO ConfigItems (key, value) values('PollTimer', "7s");
+INSERT INTO ConfigItems (key, value) values('UpstreamNode', "");
+INSERT INTO ConfigItems (key, value) values('PropogateDeviceConfig', "true");
+
+INSERT INTO ConfigLines (node, configItem) values (1, (SELECT id from ConfigItems WHERE key ='ReportTimer'));
+INSERT INTO ConfigLines (node, configItem) values (1, (SELECT id from ConfigItems WHERE key ='PollTimer'));
+INSERT INTO ConfigLines (node, configItem) values (1, (SELECT id from ConfigItems WHERE key ='UpstreamNode'));
+INSERT INTO ConfigLines (node, configItem) values (1, (SELECT id from ConfigItems WHERE key ='PropogateDeviceConfig'));
+

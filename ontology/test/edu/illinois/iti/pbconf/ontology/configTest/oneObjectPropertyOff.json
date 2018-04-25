@@ -1,0 +1,12 @@
+{  
+    "ontology":"config",
+    "ontologizer":"SEL421",
+    "individual":"sel421FAKEDEVICEB",
+    "properties":[
+       {  
+          "Op":"service",
+          "Key":"hasTelnetStt",
+          "Val":"off"
+       }
+    ]
+ }

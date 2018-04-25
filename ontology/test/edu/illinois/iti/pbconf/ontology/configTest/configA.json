@@ -1,0 +1,54 @@
+[
+{
+    "input":{  
+       "iri":"http://iti.illinois.edu/iti/pbconf/config#sel421FAKEDEVICEB",
+       "ontology":"http://iti.illinois.edu/iti/pbconf/config",
+       "name":"sel421FAKEDEVICEB",
+       "class":"sel421",
+       "properties":[  
+          {  
+             "Op":"variable",
+             "Key":"foo",
+             "Val":"bars"
+          },
+          {  
+             "Op":"password",
+             "Key":"2",
+             "Val":"TAIL"
+          },
+          {  
+             "Op":"service",
+             "Key":"ftp",
+             "Val":"on"
+          }
+       ]
+    },
+    "result":"INVALID"
+},
+{
+    "input":{  
+       "iri":"http://iti.illinois.edu/iti/pbconf/config#sel421FAKEDEVICEB",
+       "ontology":"http://iti.illinois.edu/iti/pbconf/config",
+       "name":"sel421FAKEDEVICEB",
+       "class":"sel421",
+       "properties":[  
+          {  
+             "Op":"variable",
+             "Key":"foo",
+             "Val":"bars"
+          },
+          {  
+             "Op":"password",
+             "Key":"2",
+             "Val":"TAIL43ab"
+          },
+          {  
+             "Op":"service",
+             "Key":"ftp",
+             "Val":"on"
+          }
+       ]
+    },
+    "result":"VALID"
+}
+]

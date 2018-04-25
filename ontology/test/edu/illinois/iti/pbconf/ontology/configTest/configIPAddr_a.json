@@ -1,0 +1,37 @@
+[
+{
+    "input":{
+       "ontology":"config",
+       "ontologizer":"SEL421",
+       "individual":"sel421FAKEDEVICEB",
+       "properties":[
+          {  
+             "Op":"variable",
+             "Key":"hasByte1",
+             "Val":"10"
+          },
+          {  
+             "Op":"variable",
+             "Key":"hasByte2",
+             "Val":"10"
+          },
+          {  
+             "Op":"variable",
+             "Key":"hasByte3",
+             "Val":"1"
+          },
+          {  
+             "Op":"variable",
+             "Key":"hasByte4",
+             "Val":"150"
+          },
+          {
+             "Op":"type",
+             "Key":"",
+             "Val":"IPAddress"            
+          }
+       ]
+    },
+    "result":"VALID"
+}
+]

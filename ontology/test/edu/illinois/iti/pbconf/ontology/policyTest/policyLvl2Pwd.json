@@ -1,0 +1,28 @@
+[
+{
+    "input":{  
+        "ontology":"policy",
+        "data":[[{
+            "Class":"password.level2",
+            "Axioms":[
+                {  
+                    "s":"",
+                    "p":"min-length",
+                    "o":"4"
+                 },
+                 {  
+                    "s":"",
+                    "p":"max-length",
+                    "o":"16"
+                 },
+                 {  
+                    "s":"",
+                    "p":"complexity",
+                    "o":"LOWERCASE"
+                 }
+            ]
+        }]]
+     },
+    "result":"VALID"
+}
+]

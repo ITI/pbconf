@@ -1,0 +1,33 @@
+[
+{
+    "input":{
+        "ontology":"policy",
+        "data":[[{
+            "Class":"sel421FAKEDEVICEA",
+            "Axioms":[
+                {  
+                    "s":"accessTimeout",
+                    "p":"gte",
+                    "o":"20"
+                },
+                {  
+                    "s":"ntp",
+                    "p":"state",
+                    "o":"on"
+                },
+                {
+                    "s":"",
+                    "p":"requires",
+                    "o":"alarm"
+                },
+                {
+                    "s":"alarm",
+                    "p":"state",
+                    "o":"on"
+                } 
+            ]
+        }]]
+     },
+    "result":"VALID"
+}
+]

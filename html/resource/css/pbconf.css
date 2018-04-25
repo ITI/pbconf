@@ -1,0 +1,313 @@
+.div-logout {
+	padding:10px;
+}
+
+.btn-logout {
+  background-color: #2766d6;
+  border-color: #2766d6;
+  color: #ffffff;
+  
+}
+.btn-logout:hover,
+.btn-logout:focus,
+.btn-logout:active,
+.btn-logout.active {
+  background-color: #235cc0;
+  border-color: #1f51ab;
+  color: #ffffff;
+}
+.btn-logout.disabled:hover,
+.btn-logout.disabled:focus,
+.btn-logout.disabled:active,
+.btn-logout.disabled.active,
+.btn-logout[disabled]:hover,
+.btn-logout[disabled]:focus,
+.btn-logout[disabled]:active,
+.btn-logout[disabled].active,
+fieldset[disabled] .btn-logout:hover,
+fieldset[disabled] .btn-logout:focus,
+fieldset[disabled] .btn-logout:active,
+fieldset[disabled] .btn-logout.active {
+  background-color: #2766d6;
+  border-color: #2766d6;
+  color: #ffffff;
+}
+
+.navbar-pbconf {
+  background-color: #002058;
+  border-color: #001437;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#00338b), to(#002058));
+  background-image: -webkit-linear-gradient(top, #00338b, 0%, #002058, 100%);
+  background-image: -moz-linear-gradient(top, #00338b 0%, #002058 100%);
+  background-image: linear-gradient(to bottom, #00338b 0%, #002058 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00338b', endColorstr='#ff002058', GradientType=0);
+}
+.navbar-pbconf .navbar-brand {
+  color: #f4f7fa;
+}
+.navbar-pbconf .navbar-brand:hover,
+.navbar-pbconf .navbar-brand:focus {
+  color: #d1deea;
+  background-color: transparent;
+}
+.navbar-pbconf .navbar-text {
+  color: #f4f7fa;
+}
+.navbar-pbconf .navbar-nav > li > a {
+  color: #f4f7fa;
+}
+.navbar-pbconf .navbar-nav > li > a:hover,
+.navbar-pbconf .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+.navbar-pbconf .navbar-nav > .active > a,
+.navbar-pbconf .navbar-nav > .active > a:hover,
+.navbar-pbconf .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #001437;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#001437), to(#00266a));
+  background-image: -webkit-linear-gradient(top, #001437, 0%, #00266a, 100%);
+  background-image: -moz-linear-gradient(top, #001437 0%, #00266a 100%);
+  background-image: linear-gradient(to bottom, #001437 0%, #00266a 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff001437', endColorstr='#ff00266a', GradientType=0);
+}
+.navbar-pbconf .navbar-nav > .disabled > a,
+.navbar-pbconf .navbar-nav > .disabled > a:hover,
+.navbar-pbconf .navbar-nav > .disabled > a:focus {
+  color: #cccccc;
+  background-color: transparent;
+}
+.navbar-pbconf .navbar-toggle {
+  border-color: #dddddd;
+}
+.navbar-pbconf .navbar-toggle:hover,
+.navbar-pbconf .navbar-toggle:focus {
+  background-color: #002058;
+}
+.navbar-pbconf .navbar-toggle .icon-bar {
+  background-color: #cccccc;
+}
+.navbar-pbconf .navbar-collapse,
+.navbar-pbconf .navbar-form {
+  border-color: #001334;
+}
+.navbar-pbconf .navbar-nav > .dropdown > a:hover .caret,
+.navbar-pbconf .navbar-nav > .dropdown > a:focus .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.navbar-pbconf .navbar-nav > .open > a,
+.navbar-pbconf .navbar-nav > .open > a:hover,
+.navbar-pbconf .navbar-nav > .open > a:focus {
+  background-color: #001437;
+  color: #ffffff;
+}
+.navbar-pbconf .navbar-nav > .open > a .caret,
+.navbar-pbconf .navbar-nav > .open > a:hover .caret,
+.navbar-pbconf .navbar-nav > .open > a:focus .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.navbar-pbconf .navbar-nav > .dropdown > a .caret {
+  border-top-color: #f4f7fa;
+  border-bottom-color: #f4f7fa;
+}
+@media (max-width: 767) {
+  .navbar-pbconf .navbar-nav .open .dropdown-menu > li > a {
+    color: #f4f7fa;
+  }
+  .navbar-pbconf .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-pbconf .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+  }
+  .navbar-pbconf .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-pbconf .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-pbconf .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #001437;
+  }
+  .navbar-pbconf .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-pbconf .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-pbconf .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #cccccc;
+    background-color: transparent;
+  }
+}
+.navbar-pbconf .navbar-link {
+  color: #f4f7fa;
+}
+.navbar-pbconf .navbar-link:hover {
+  color: #ffffff;
+}
+
+.btn-save {
+  background-color: #2766d6;
+  border-color: #2766d6;
+  color: #ffffff;
+}
+.btn-save:hover,
+.btn-save:focus,
+.btn-save:active,
+.btn-save.active {
+  background-color: #235cc0;
+  border-color: #1f51ab;
+  color: #ffffff;
+}
+.btn-save.disabled:hover,
+.btn-save.disabled:focus,
+.btn-save.disabled:active,
+.btn-save.disabled.active,
+.btn-save[disabled]:hover,
+.btn-save[disabled]:focus,
+.btn-save[disabled]:active,
+.btn-save[disabled].active,
+fieldset[disabled] .btn-save:hover,
+fieldset[disabled] .btn-save:focus,
+fieldset[disabled] .btn-save:active,
+fieldset[disabled] .btn-save.active {
+  background-color: #2766d6;
+  border-color: #2766d6;
+  color: #ffffff;
+}
+
+.btn-cancel {
+  background-color: #2766d6;
+  border-color: #2766d6;
+  color: #ffffff;
+}
+.btn-cancel:hover,
+.btn-cancel:focus,
+.btn-cancel:active,
+.btn-cancel.active {
+  background-color: #235cc0;
+  border-color: #1f51ab;
+  color: #ffffff;
+}
+.btn-cancel.disabled:hover,
+.btn-cancel.disabled:focus,
+.btn-cancel.disabled:active,
+.btn-cancel.disabled.active,
+.btn-cancel[disabled]:hover,
+.btn-cancel[disabled]:focus,
+.btn-cancel[disabled]:active,
+.btn-cancel[disabled].active,
+fieldset[disabled] .btn-cancel:hover,
+fieldset[disabled] .btn-cancel:focus,
+fieldset[disabled] .btn-cancel:active,
+fieldset[disabled] .btn-cancel.active {
+  background-color: #2766d6;
+  border-color: #2766d6;
+  color: #ffffff;
+}
+
+.btn-run {
+  background-color: #2766d6;
+  border-color: #2766d6;
+  color: #ffffff;
+}
+.btn-run:hover,
+.btn-run:focus,
+.btn-run:active,
+.btn-run.active {
+  background-color: #235cc0;
+  border-color: #1f51ab;
+  color: #ffffff;
+}
+.btn-run.disabled:hover,
+.btn-run.disabled:focus,
+.btn-run.disabled:active,
+.btn-run.disabled.active,
+.btn-run[disabled]:hover,
+.btn-run[disabled]:focus,
+.btn-run[disabled]:active,
+.btn-run[disabled].active,
+fieldset[disabled] .btn-run:hover,
+fieldset[disabled] .btn-run:focus,
+fieldset[disabled] .btn-run:active,
+fieldset[disabled] .btn-run.active {
+  background-color: #2766d6;
+  border-color: #2766d6;
+  color: #ffffff;
+}
+
+textarea:disabled {
+  background-color: #eeeeee;
+}
+
+.login-cred {
+	width: 250px;
+	height: 30px;
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-login {
+  background-color: #2766d6;
+  border-color: #2766d6;
+  color: #ffffff;
+  width: 250px;
+}
+.btn-login:hover,
+.btn-login:focus,
+.btn-login:active,
+.btn-login.active {
+  background-color: #235cc0;
+  border-color: #1f51ab;
+  color: #ffffff;
+  width: 250px;
+}
+
+.drop-shadow {
+	-webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px 2px #dddddd;
+}
+
+.panel-chartreuse >.panel-heading {
+    background-image: none;
+	background: linear-gradient(to bottom, #bec92f 0%, #899122 100%); 
+    color: #ffffff;
+}
+
+.panel-gold >.panel-heading {
+    background-image: none;
+	background: linear-gradient(to bottom, #f9ad1c 0%, #c78305 100%); 
+    color: #ffffff;
+}
+
+.panel-indigo >.panel-heading {
+    background-image: none;
+	background: linear-gradient(to bottom, #43687b 0%, #243842 100%); 
+    color: #ffffff;
+}
+
+.btn-alarm-panel{
+ 	margin: 0px 0px 0px 0px;
+}
+
+.alarm-pane{
+  max-height:150px;
+  overflow-y:scroll;
+  margin: 0px 0px 0px 10px;
+}
+
+.report-pane{
+  max-height:200px;
+  overflow-y:auto;
+}
+
+.alarm-checkbox {
+
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}

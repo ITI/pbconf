@@ -1,0 +1,605 @@
+@prefix : <http://iti.illinois.edu/iti/pbconf/sel421FAKEDEVICEB#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://iti.illinois.edu/iti/pbconf/config> a owl:Ontology .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasAccessLoggingStt
+
+<http://iti.illinois.edu/iti/pbconf/core#hasAccessLoggingStt> a owl:ObjectProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasAlarmStt
+
+<http://iti.illinois.edu/iti/pbconf/core#hasAlarmStt> a owl:ObjectProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation
+
+<http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> a owl:ObjectProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasDNP3Stt
+
+<http://iti.illinois.edu/iti/pbconf/core#hasDNP3Stt> a owl:ObjectProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasDstIPAddr
+
+<http://iti.illinois.edu/iti/pbconf/core#hasDstIPAddr> a owl:ObjectProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasFTPStt
+
+<http://iti.illinois.edu/iti/pbconf/core#hasFTPStt> a owl:ObjectProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasGPSStt
+
+<http://iti.illinois.edu/iti/pbconf/core#hasGPSStt> a owl:ObjectProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasIEC61850Stt
+
+<http://iti.illinois.edu/iti/pbconf/core#hasIEC61850Stt> a owl:ObjectProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasIPAddr
+
+<http://iti.illinois.edu/iti/pbconf/core#hasIPAddr> a owl:ObjectProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasNTPStt
+
+<http://iti.illinois.edu/iti/pbconf/core#hasNTPStt> a owl:ObjectProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasPingStt
+
+<http://iti.illinois.edu/iti/pbconf/core#hasPingStt> a owl:ObjectProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasPort5
+
+<http://iti.illinois.edu/iti/pbconf/core#hasPort5> a owl:ObjectProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasRouterIPAddr
+
+<http://iti.illinois.edu/iti/pbconf/core#hasRouterIPAddr> a owl:ObjectProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasStt
+
+<http://iti.illinois.edu/iti/pbconf/core#hasStt> a owl:ObjectProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasTelnetStt
+
+<http://iti.illinois.edu/iti/pbconf/core#hasTelnetStt> a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasAccessTimeout
+
+<http://iti.illinois.edu/iti/pbconf/core#hasAccessTimeout> a owl:DatatypeProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasByte1
+
+<http://iti.illinois.edu/iti/pbconf/core#hasByte1> a owl:DatatypeProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasByte2
+
+<http://iti.illinois.edu/iti/pbconf/core#hasByte2> a owl:DatatypeProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasByte3
+
+<http://iti.illinois.edu/iti/pbconf/core#hasByte3> a owl:DatatypeProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasByte4
+
+<http://iti.illinois.edu/iti/pbconf/core#hasByte4> a owl:DatatypeProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasDstPort
+
+<http://iti.illinois.edu/iti/pbconf/core#hasDstPort> a owl:DatatypeProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasLvlCPwd
+
+<http://iti.illinois.edu/iti/pbconf/core#hasLvlCPwd> a owl:DatatypeProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasMACAddr
+
+<http://iti.illinois.edu/iti/pbconf/core#hasMACAddr> a owl:DatatypeProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasRetryDelayed
+
+<http://iti.illinois.edu/iti/pbconf/core#hasRetryDelayed> a owl:DatatypeProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasTelnetPort
+
+<http://iti.illinois.edu/iti/pbconf/core#hasTelnetPort> a owl:DatatypeProperty .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#hasTelnetTimeout
+
+<http://iti.illinois.edu/iti/pbconf/core#hasTelnetTimeout> a owl:DatatypeProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://iti.illinois.edu/iti/pbconf/core#IPAddress
+
+<http://iti.illinois.edu/iti/pbconf/core#IPAddress> a owl:Class .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#Packet
+
+<http://iti.illinois.edu/iti/pbconf/core#Packet> a owl:Class .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#SEL421
+
+<http://iti.illinois.edu/iti/pbconf/core#SEL421> a owl:Class .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel0
+
+<http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel0> a owl:Class ;
+	owl:equivalentClass _:genid1 .
+
+_:genid1 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics> .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1
+
+<http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1> a owl:Class ;
+	owl:equivalentClass _:genid2 .
+
+_:genid2 owl:intersectionOf _:genid5 .
+
+_:genid5 a rdf:List ;
+	rdf:first _:genid6 .
+
+_:genid6 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics> .
+
+_:genid5 rdf:rest _:genid3 .
+
+_:genid3 a rdf:List ;
+	rdf:first _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info> .
+
+_:genid3 rdf:rest rdf:nil .
+
+_:genid2 a owl:Class .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1A
+
+<http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1A> a owl:Class ;
+	owl:equivalentClass _:genid7 .
+
+_:genid7 owl:intersectionOf _:genid12 .
+
+_:genid12 a rdf:List ;
+	rdf:first _:genid13 .
+
+_:genid13 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting> .
+
+_:genid12 rdf:rest _:genid10 .
+
+_:genid10 a rdf:List ;
+	rdf:first _:genid11 .
+
+_:genid11 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics> .
+
+_:genid10 rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first _:genid9 .
+
+_:genid9 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info> .
+
+_:genid8 rdf:rest rdf:nil .
+
+_:genid7 a owl:Class .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1B
+
+<http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1B> a owl:Class ;
+	owl:equivalentClass _:genid14 .
+
+_:genid14 owl:intersectionOf _:genid19 .
+
+_:genid19 a rdf:List ;
+	rdf:first _:genid20 .
+
+_:genid20 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_breaker_control_and_data> .
+
+_:genid19 rdf:rest _:genid17 .
+
+_:genid17 a rdf:List ;
+	rdf:first _:genid18 .
+
+_:genid18 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics> .
+
+_:genid17 rdf:rest _:genid15 .
+
+_:genid15 a rdf:List ;
+	rdf:first _:genid16 .
+
+_:genid16 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info> .
+
+_:genid15 rdf:rest rdf:nil .
+
+_:genid14 a owl:Class .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1O
+
+<http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1O> a owl:Class ;
+	owl:equivalentClass _:genid21 .
+
+_:genid21 owl:intersectionOf _:genid26 .
+
+_:genid26 a rdf:List ;
+	rdf:first _:genid27 .
+
+_:genid27 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_output_setting> .
+
+_:genid26 rdf:rest _:genid24 .
+
+_:genid24 a rdf:List ;
+	rdf:first _:genid25 .
+
+_:genid25 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics> .
+
+_:genid24 rdf:rest _:genid22 .
+
+_:genid22 a rdf:List ;
+	rdf:first _:genid23 .
+
+_:genid23 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info> .
+
+_:genid22 rdf:rest rdf:nil .
+
+_:genid21 a owl:Class .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1P
+
+<http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel1P> a owl:Class ;
+	owl:equivalentClass _:genid28 .
+
+_:genid28 owl:intersectionOf _:genid33 .
+
+_:genid33 a rdf:List ;
+	rdf:first _:genid34 .
+
+_:genid34 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_protection_setting> .
+
+_:genid33 rdf:rest _:genid31 .
+
+_:genid31 a rdf:List ;
+	rdf:first _:genid32 .
+
+_:genid32 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics> .
+
+_:genid31 rdf:rest _:genid29 .
+
+_:genid29 a rdf:List ;
+	rdf:first _:genid30 .
+
+_:genid30 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info> .
+
+_:genid29 rdf:rest rdf:nil .
+
+_:genid28 a owl:Class .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel2
+
+<http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevel2> a owl:Class ;
+	owl:equivalentClass _:genid35 .
+
+_:genid35 owl:intersectionOf _:genid46 .
+
+_:genid46 a rdf:List ;
+	rdf:first _:genid47 .
+
+_:genid47 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting> .
+
+_:genid46 rdf:rest _:genid44 .
+
+_:genid44 a rdf:List ;
+	rdf:first _:genid45 .
+
+_:genid45 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_breaker_control_and_data> .
+
+_:genid44 rdf:rest _:genid42 .
+
+_:genid42 a rdf:List ;
+	rdf:first _:genid43 .
+
+_:genid43 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_output_setting> .
+
+_:genid42 rdf:rest _:genid40 .
+
+_:genid40 a rdf:List ;
+	rdf:first _:genid41 .
+
+_:genid41 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_protection_setting> .
+
+_:genid40 rdf:rest _:genid38 .
+
+_:genid38 a rdf:List ;
+	rdf:first _:genid39 .
+
+_:genid39 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics> .
+
+_:genid38 rdf:rest _:genid36 .
+
+_:genid36 a rdf:List ;
+	rdf:first _:genid37 .
+
+_:genid37 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info> .
+
+_:genid36 rdf:rest rdf:nil .
+
+_:genid35 a owl:Class .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevelC
+
+<http://iti.illinois.edu/iti/pbconf/core#SEL421AccessLevelC> a owl:Class ;
+	owl:equivalentClass _:genid48 .
+
+_:genid48 owl:intersectionOf _:genid51 .
+
+_:genid51 a rdf:List ;
+	rdf:first _:genid52 .
+
+_:genid52 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_calibration> .
+
+_:genid51 rdf:rest _:genid49 .
+
+_:genid49 a rdf:List ;
+	rdf:first _:genid50 .
+
+_:genid50 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics> .
+
+_:genid49 rdf:rest rdf:nil .
+
+_:genid48 a owl:Class .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#SEL421Operation
+
+<http://iti.illinois.edu/iti/pbconf/core#SEL421Operation> a owl:Class ;
+	owl:equivalentClass _:genid53 .
+
+_:genid53 a owl:Class ;
+	owl:oneOf _:genid60 .
+
+_:genid60 a rdf:List ;
+	rdf:first <http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting> ;
+	rdf:rest _:genid59 .
+
+_:genid59 a rdf:List ;
+	rdf:first <http://iti.illinois.edu/iti/pbconf/core#sel421_breaker_control_and_data> ;
+	rdf:rest _:genid58 .
+
+_:genid58 a rdf:List ;
+	rdf:first <http://iti.illinois.edu/iti/pbconf/core#sel421_calibration> ;
+	rdf:rest _:genid57 .
+
+_:genid57 a rdf:List ;
+	rdf:first <http://iti.illinois.edu/iti/pbconf/core#sel421_output_setting> ;
+	rdf:rest _:genid56 .
+
+_:genid56 a rdf:List ;
+	rdf:first <http://iti.illinois.edu/iti/pbconf/core#sel421_protection_setting> ;
+	rdf:rest _:genid55 .
+
+_:genid55 a rdf:List ;
+	rdf:first <http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics> ;
+	rdf:rest _:genid54 .
+
+_:genid54 a rdf:List ;
+	rdf:first <http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info> ;
+	rdf:rest rdf:nil .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#SEL421Port5
+
+<http://iti.illinois.edu/iti/pbconf/core#SEL421Port5> a owl:Class .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#Test_HTTP_Packet
+
+<http://iti.illinois.edu/iti/pbconf/core#Test_HTTP_Packet> a owl:Class ;
+	owl:equivalentClass _:genid61 .
+
+_:genid61 owl:intersectionOf _:genid66 .
+
+_:genid66 a rdf:List ;
+	rdf:first <http://iti.illinois.edu/iti/pbconf/core#Packet> ;
+	rdf:rest _:genid64 .
+
+_:genid64 a rdf:List ;
+	rdf:first _:genid65 .
+
+_:genid65 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasDstIPAddr> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel4215a_port5_ipaddr> .
+
+_:genid64 rdf:rest _:genid62 .
+
+_:genid62 a rdf:List ;
+	rdf:first _:genid63 .
+
+_:genid63 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasDstPort> ;
+	owl:hasValue "80"^^xsd:integer .
+
+_:genid62 rdf:rest rdf:nil .
+
+_:genid61 a owl:Class .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#Test_Telnet_Packet
+
+<http://iti.illinois.edu/iti/pbconf/core#Test_Telnet_Packet> a owl:Class ;
+	owl:equivalentClass _:genid67 .
+
+_:genid67 owl:intersectionOf _:genid72 .
+
+_:genid72 a rdf:List ;
+	rdf:first <http://iti.illinois.edu/iti/pbconf/core#Packet> ;
+	rdf:rest _:genid70 .
+
+_:genid70 a rdf:List ;
+	rdf:first _:genid71 .
+
+_:genid71 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasDstIPAddr> ;
+	owl:hasValue <http://iti.illinois.edu/iti/pbconf/core#sel4215a_port5_ipaddr> .
+
+_:genid70 rdf:rest _:genid68 .
+
+_:genid68 a rdf:List ;
+	rdf:first _:genid69 .
+
+_:genid69 a owl:Restriction ;
+	owl:onProperty <http://iti.illinois.edu/iti/pbconf/core#hasDstPort> ;
+	owl:hasValue "23"^^xsd:integer .
+
+_:genid68 rdf:rest rdf:nil .
+
+_:genid67 a owl:Class .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://iti.illinois.edu/iti/pbconf/config#sel421FAKEDEVICEB
+
+<http://iti.illinois.edu/iti/pbconf/config#sel421FAKEDEVICEB> a owl:NamedIndividual , <http://iti.illinois.edu/iti/pbconf/core#SEL421> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasAccessLoggingStt> <http://iti.illinois.edu/iti/pbconf/core#on> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasAlarmStt> <http://iti.illinois.edu/iti/pbconf/core#on> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasGPSStt> <http://iti.illinois.edu/iti/pbconf/core#on> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasPort5> <http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICEB_port5> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasLvlCPwd> "dsodinbqeor"^^xsd:string .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#on
+
+<http://iti.illinois.edu/iti/pbconf/core#on> a owl:NamedIndividual .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#router1_ipaddr
+
+<http://iti.illinois.edu/iti/pbconf/core#router1_ipaddr> a owl:NamedIndividual .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#sel4215a_port5_ipaddr
+
+<http://iti.illinois.edu/iti/pbconf/core#sel4215a_port5_ipaddr> a owl:NamedIndividual , <http://iti.illinois.edu/iti/pbconf/core#IPAddress> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasByte1> "10"^^xsd:integer ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasByte2> "10"^^xsd:integer ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasByte3> "10"^^xsd:integer ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasByte4> "1"^^xsd:integer .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting
+
+<http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting> a owl:NamedIndividual , <http://iti.illinois.edu/iti/pbconf/core#SEL421Operation> .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#sel421_breaker_control_and_data
+
+<http://iti.illinois.edu/iti/pbconf/core#sel421_breaker_control_and_data> a owl:NamedIndividual , <http://iti.illinois.edu/iti/pbconf/core#SEL421Operation> .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#sel421_calibration
+
+<http://iti.illinois.edu/iti/pbconf/core#sel421_calibration> a owl:NamedIndividual , <http://iti.illinois.edu/iti/pbconf/core#SEL421Operation> .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#sel421_output_setting
+
+<http://iti.illinois.edu/iti/pbconf/core#sel421_output_setting> a owl:NamedIndividual , <http://iti.illinois.edu/iti/pbconf/core#SEL421Operation> .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#sel421_protection_setting
+
+<http://iti.illinois.edu/iti/pbconf/core#sel421_protection_setting> a owl:NamedIndividual , <http://iti.illinois.edu/iti/pbconf/core#SEL421Operation> .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics
+
+<http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics> a owl:NamedIndividual , <http://iti.illinois.edu/iti/pbconf/core#SEL421Operation> .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info
+
+<http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info> a owl:NamedIndividual , <http://iti.illinois.edu/iti/pbconf/core#SEL421Operation> .
+# 
+# http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICEB_port5
+
+<http://iti.illinois.edu/iti/pbconf/core#sel421FAKEDEVICEB_port5> a owl:NamedIndividual , <http://iti.illinois.edu/iti/pbconf/core#SEL421Port5> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasAllowedOperation> <http://iti.illinois.edu/iti/pbconf/core#sel421_automation_setting> , <http://iti.illinois.edu/iti/pbconf/core#sel421_test_diagnostics> , <http://iti.illinois.edu/iti/pbconf/core#sel421_view_data_and_status_info> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasDNP3Stt> <http://iti.illinois.edu/iti/pbconf/core#on> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasFTPStt> <http://iti.illinois.edu/iti/pbconf/core#on> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasIEC61850Stt> <http://iti.illinois.edu/iti/pbconf/core#on> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasIPAddr> <http://iti.illinois.edu/iti/pbconf/core#sel4215a_port5_ipaddr> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasNTPStt> <http://iti.illinois.edu/iti/pbconf/core#on> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasPingStt> <http://iti.illinois.edu/iti/pbconf/core#on> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasRouterIPAddr> <http://iti.illinois.edu/iti/pbconf/core#router1_ipaddr> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasStt> <http://iti.illinois.edu/iti/pbconf/core#on> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasTelnetStt> <http://iti.illinois.edu/iti/pbconf/core#on> ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasAccessTimeout> "5"^^xsd:integer ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasMACAddr> "aa:bb:cc:dd:ee:ff"^^xsd:string ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasRetryDelayed> "10"^^xsd:integer ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasTelnetPort> "23"^^xsd:integer ;
+	<http://iti.illinois.edu/iti/pbconf/core#hasTelnetTimeout> "10"^^xsd:integer .
+# 
+# Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi
